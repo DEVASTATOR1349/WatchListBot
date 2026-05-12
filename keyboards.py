@@ -9,10 +9,9 @@ def main_menu(has_groups: bool = False) -> ReplyKeyboardMarkup:
     kb = [
         [KeyboardButton(text="🎬 Мой список")],
         [KeyboardButton(text="➕ Добавить"), KeyboardButton(text="📊 Статистика")],
+        [KeyboardButton(text="👥 Группы")],
+        [KeyboardButton(text="🏠 Главная")],
     ]
-    if has_groups:
-        kb.append([KeyboardButton(text="👥 Группы")])
-    kb.append([KeyboardButton(text="🏠 Главная")])
     return ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
 
 
